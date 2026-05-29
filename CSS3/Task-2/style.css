@@ -1,0 +1,18 @@
+/* Style for page heading */
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+/* Style for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Style for page background */
+body {
+    background-color: lightgray;
+}
