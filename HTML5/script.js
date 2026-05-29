@@ -69,7 +69,7 @@ let watchedVideo = false;
 
 function videoReady() {
   document.getElementById("video-msg").innerText = "Video ready to play";
-  watchedVideo=true;
+  watchedVideo = true;
 }
 
 window.onbeforeunload = function () {
@@ -77,3 +77,27 @@ window.onbeforeunload = function () {
     return "Please watch the event promo video before leaving.";
   }
 };
+
+function savePreference() {
+  let eventType = document.getElementById("preferred-event").value;
+
+  localStorage.setItem("preferredEvent", eventType);
+
+  alert("Preference Saved");
+}
+
+window.onload = function () {
+  let savedEvent = localStorage.getItem("preferredEvent");
+
+  if (savedEvent) {
+    document.getElementById("preferred-event").value = savedEvent;
+  }
+};
+
+function clearPreferences() {
+  localStorage.clear();
+
+  sessionStorage.clear();
+
+  alert("Preferences Cleared");
+}

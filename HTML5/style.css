@@ -132,3 +132,15 @@ form button:hover {
 #video{
     width :"500"
 }
+
+.task7,.task8 {
+    width: 100%;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(245, 245, 245);
+}

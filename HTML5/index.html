@@ -145,6 +145,42 @@
         </video>
         <p id="video-msg"></p>
     </div>
+
+    <div class="task8">
+    
+        <form id="preferences-form">
+    
+            <h2>User Preferences</h2>
+    
+            <label for="preferred-event">
+                Preferred Event Type :
+            </label>
+    
+            <select id="preferred-event" required>
+    
+                <option value="">Select Event</option>
+    
+                <option value="dance">Dance</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="fashion">Fashion</option>
+                <option value="racing">Racing</option>
+                <option value="painting">Painting</option>
+    
+            </select>
+    
+            <button type="button" onclick="savePreference()">
+                Save Preference
+            </button>
+    
+            <button type="button" onclick="clearPreferences()">
+                Clear Preferences
+            </button>
+    
+        </form>
+    
+    </div>
+
     <!-- Footer Section -->
 </body>
 <script src="./script.js"></script>
