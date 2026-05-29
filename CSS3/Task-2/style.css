@@ -7,6 +7,7 @@ h1 {
 /* Style for main CTA button */
 .cta-button {
     background-color: #007BFF;
+    width: 10%;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -15,4 +16,7 @@ h1 {
 /* Style for page background */
 body {
     background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
