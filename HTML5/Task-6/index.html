@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task-6</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="task6">
+            <form>
+                <h2>Feedback Form</h2>
+                <label for="phone">Phone number :</label>
+                <input type="text" id="phone" placeholder="phone" onblur="validatePhone()" required>
+                <label for="event-type">Event-Type :</label>
+                <select id="type" onchange="dropChange()">
+                    <option value="dance" selected>Dance</option>
+                    <option value="music">Music</option>
+                    <option value="racing">Racing</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="sports">Sports</option>
+                    <option value="Painting">Painting</option>
+                </select>
+                <p id="event-fee"></p>
+                <img src="" id="event_img" alt="event" ondblclick="enlargeImage()">
+                <label for="feedback">Feedback :</label>
+                <textarea id="feedback" placeholder="..." onkeyup="count()" required></textarea>
+                <p id="count">Count :</p>
+                <button type="submit" onclick="submitForm()">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
