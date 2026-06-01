@@ -1,3 +1,5 @@
+let enlarged = false;
+
 function validatePhone() {
   let phone = document.getElementById("phone").value;
 
@@ -20,9 +22,13 @@ function count() {
 
 function enlargeImage() {
   let image = document.getElementById("event_img");
-
-  image.style.width = "500px";
-  image.style.height = "350px";
+  if (!enlarged) {
+    image.style.transform = "scale(1.5)";
+    enlarged = true;
+  } else {
+    image.style.transform = "scale(1)";
+    enlarged = false;
+  }
 }
 
 function dropChange() {
