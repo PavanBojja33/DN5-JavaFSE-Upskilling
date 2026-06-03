@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bootstrap Sizing & Dimensions Playground</title>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            color: #2D3748;
+        }
+        .demo-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .demo-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05) !important;
+        }
+        .dimension-bar {
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: white;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            transition: width 0.3s ease;
+        }
+        .height-container {
+            height: 160px;
+            background: rgba(0, 0, 0, 0.02);
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 10px;
+        }
+        .dimension-col {
+            display: inline-block;
+            width: 45px;
+            margin-right: 12px;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            line-height: 2.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-2">Bootstrap Task 11</span>
+            <h1 class="fw-bold text-dark">Sizing & Dimensions</h1>
+            <p class="text-muted col-lg-6 mx-auto">Learn how to easily control width, height, and button dimensions using Bootstrap's sizing utility classes.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1: Button Dimensions -->
+            <div class="col-md-6 col-lg-5">
+                <div class="card demo-card shadow-sm h-100 p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 38px; height: 38px;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <h5 class="card-title fw-semibold m-0">Button Dimensions (Sizes)</h5>
+                    </div>
+                    <p class="text-muted small mb-4">Modify the height, padding, and width of buttons using standard size and utility classes.</p>
+
+                    <!-- Sizes -->
+                    <div class="mb-4">
+                        <label class="form-label text-secondary small fw-medium">Sizing Classes (sm, default, lg)</label>
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                            <button class="btn btn-primary btn-sm">Small Button (.btn-sm)</button>
+                            <button class="btn btn-primary">Default Button</button>
+                            <button class="btn btn-primary btn-lg">Large Button (.btn-lg)</button>
+                        </div>
+                    </div>
+
+                    <!-- Width-Based Buttons -->
+                    <div class="mb-4">
+                        <label class="form-label text-secondary small fw-medium">Block Width Buttons (w-50, w-100)</label>
+                        <div class="d-flex flex-column gap-2">
+                            <button class="btn btn-secondary w-50">Medium (.w-50)</button>
+                            <button class="btn btn-outline-danger w-100">Full Width (.w-100)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Width Sizing Utilities -->
+            <div class="col-md-6 col-lg-5">
+                <div class="card demo-card shadow-sm h-100 p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 38px; height: 38px;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <h5 class="card-title fw-semibold m-0">Width Utilities (w-*)</h5>
+                    </div>
+                    <p class="text-muted small mb-4">Set the width of elements relative to their parent container using standard Bootstrap width percentage helpers.</p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <div class="dimension-bar bg-primary w-25">w-25 (25%)</div>
+                        </div>
+                        <div>
+                            <div class="dimension-bar bg-success w-50">w-50 (50%)</div>
+                        </div>
+                        <div>
+                            <div class="dimension-bar bg-warning text-dark w-75">w-75 (75%)</div>
+                        </div>
+                        <div>
+                            <div class="dimension-bar bg-danger w-100">w-100 (100%)</div>
+                        </div>
+                        <div>
+                            <div class="dimension-bar bg-secondary w-auto">w-auto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Height Sizing Utilities -->
+            <div class="col-md-12 col-lg-10">
+                <div class="card demo-card shadow-sm p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 38px; height: 38px;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <h5 class="card-title fw-semibold m-0">Height Utilities (h-*)</h5>
+                    </div>
+                    <p class="text-muted small mb-4">Control element heights relative to their parent block container using height percentage helper classes.</p>
+
+                    <div class="height-container d-flex align-items-end">
+                        <div class="dimension-col bg-primary h-25">h-25</div>
+                        <div class="dimension-col bg-success h-50">h-50</div>
+                        <div class="dimension-col bg-warning text-dark h-75">h-75</div>
+                        <div class="dimension-col bg-danger h-100">h-100</div>
+                        <div class="dimension-col bg-secondary h-auto py-2">auto</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
