@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 11 - Working with Forms</title>
+</head>
+<body>
+  <h1>Task 11: Working with Forms</h1>
+  <form id="registrationForm">
+    <div>
+      <input name="userName" placeholder="Your Name" />
+      <span id="nameError" style="color:red;"></span>
+    </div>
+    <div>
+      <input name="email" placeholder="Your Email" />
+      <span id="emailError" style="color:red;"></span>
+    </div>
+    <div>
+      <select name="event">
+        <option value="">Select Event</option>
+        <option value="Music Fest">Music Fest</option>
+        <option value="Art Show">Art Show</option>
+        <option value="Baking Workshop">Baking Workshop</option>
+      </select>
+      <span id="eventError" style="color:red;"></span>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <p id="successMsg"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>
