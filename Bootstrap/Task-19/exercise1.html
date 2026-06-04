@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Bootstrap Sass Setup</title>
+</head>
+<body class="p-4">
+    <div class="container">
+        <h2>Customization with Sass - Setup</h2>
+        <p>Exercise 19.1: Set up a Bootstrap 5 project with Sass using npm.</p>
+        <h5>Steps to set up Bootstrap 5 with Sass:</h5>
+        <ol>
+            <li>Initialize npm project: <code>npm init -y</code></li>
+            <li>Install Bootstrap and Sass: <code>npm install bootstrap sass</code></li>
+            <li>Create a file <code>custom.scss</code> and import Bootstrap:
+                <pre class="bg-light p-2 mt-1">@import "../node_modules/bootstrap/scss/bootstrap";</pre>
+            </li>
+            <li>Compile Sass: <code>npx sass custom.scss custom.css</code></li>
+            <li>Link the compiled CSS in your HTML:
+                <pre class="bg-light p-2 mt-1">&lt;link rel="stylesheet" href="custom.css"&gt;</pre>
+            </li>
+        </ol>
+        <div class="alert alert-success">Sass setup is now ready for Bootstrap 5 customization!</div>
+    </div>
+</body>
+</html>

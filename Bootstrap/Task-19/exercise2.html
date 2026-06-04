@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Sass Customization</title>
+</head>
+<body class="p-4">
+    <div class="container">
+        <h2>Customizing Bootstrap via _variables.scss</h2>
+        <p>Exercise 19.2: Customize primary colors and border-radius via <code>_variables.scss</code>.</p>
+        <h5>Steps to customize Bootstrap variables:</h5>
+        <ol>
+            <li>Create <code>custom.scss</code> and override variables <strong>before</strong> importing Bootstrap:
+                <pre class="bg-light p-2 mt-1">// Override primary color and border-radius
+$primary: #6f42c1;
+$border-radius: 1rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap";</pre>
+            </li>
+            <li>Recompile: <code>npx sass custom.scss custom.css</code></li>
+            <li>Link the compiled CSS in your HTML.</li>
+        </ol>
+        <div class="alert alert-primary mt-3">
+            This box would appear with the custom purple primary color after recompiling Sass.
+        </div>
+        <button class="btn btn-primary">Custom Primary Button</button>
+    </div>
+</body>
+</html>
